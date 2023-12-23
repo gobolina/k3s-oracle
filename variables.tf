@@ -5,8 +5,10 @@ variable "fingerprint" {}
 variable "private_key_path" {}
 variable "region" {}
 variable "compartment_name" {}
+variable "whitelist_ips" {}
 
 locals {
-  core_cidr_blocks            = ["10.0.0.0/16"]
-  ssh_managemnet_network = "1.1.1.1/32"
+  vpc_cidr = "10.0.0.0/16"
+  public_subnet = "10.0.0.0/23"
+  private_subnet = "10.0.2.0/23"
 }
