@@ -29,7 +29,7 @@
 
 	"mounts": [
 		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,readonly,type=bind",
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.oci,target=/home/vscode/.oci,readonly,type=bind"
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.oci,target=/home/vscode/.oci,type=bind"
 	 ],
 	 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -43,7 +43,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"HashiCorp.terraform"
+				"HashiCorp.terraform",
+				"timonwong.shellcheck"
 			]
 		}
 	}
